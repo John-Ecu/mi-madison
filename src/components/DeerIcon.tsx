@@ -10,42 +10,48 @@ const DeerIcon = ({ className = "w-12 h-12" }: DeerIconProps) => {
       className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Deer antlers */}
-      <path d="M25 15L20 8M35 12L30 5M40 15L45 8M50 12L55 5M75 15L80 8M65 12L70 5M60 15L55 8M50 12L45 5" 
-            stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
-      
-      {/* Main antler branches */}
-      <path d="M30 20C25 15 20 10 15 8M35 18C40 13 45 8 50 6M50 6C55 8 60 13 65 18M70 20C75 15 80 10 85 8" 
-            stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round"/>
-      
-      {/* Deer head outline */}
-      <ellipse cx="50" cy="45" rx="18" ry="22" fill="currentColor" opacity="0.9"/>
-      
-      {/* Deer ears */}
-      <ellipse cx="40" cy="35" rx="4" ry="8" fill="currentColor" transform="rotate(-20 40 35)"/>
-      <ellipse cx="60" cy="35" rx="4" ry="8" fill="currentColor" transform="rotate(20 60 35)"/>
-      
-      {/* Inner ears */}
-      <ellipse cx="41" cy="35" rx="2" ry="5" fill="white" opacity="0.8" transform="rotate(-20 41 35)"/>
-      <ellipse cx="59" cy="35" rx="2" ry="5" fill="white" opacity="0.8" transform="rotate(20 59 35)"/>
+      {/* Deer head silhouette with antlers */}
+      <path d="M50 20
+               C55 15, 60 10, 65 8
+               C67 6, 69 5, 71 6
+               C73 7, 72 9, 70 10
+               L65 15
+               C68 12, 72 8, 76 6
+               C78 5, 80 6, 79 8
+               C78 10, 76 11, 74 12
+               L68 18
+               C70 20, 72 25, 70 30
+               L65 35
+               C60 40, 55 42, 50 42
+               C45 42, 40 40, 35 35
+               L30 30
+               C28 25, 30 20, 32 18
+               L26 12
+               C24 11, 22 10, 21 8
+               C20 6, 22 5, 24 6
+               C28 8, 32 12, 35 15
+               L30 10
+               C28 9, 27 7, 29 6
+               C31 5, 33 6, 35 8
+               C40 10, 45 15, 50 20
+               Z
+               
+               M50 42
+               C42 42, 35 48, 32 55
+               C30 60, 32 65, 35 68
+               C40 72, 45 74, 50 74
+               C55 74, 60 72, 65 68
+               C68 65, 70 60, 68 55
+               C65 48, 58 42, 50 42
+               Z" 
+            fill="currentColor"/>
       
       {/* Eyes */}
-      <circle cx="44" cy="42" r="3" fill="white"/>
-      <circle cx="56" cy="42" r="3" fill="white"/>
-      <circle cx="44" cy="42" r="1.5" fill="currentColor"/>
-      <circle cx="56" cy="42" r="1.5" fill="currentColor"/>
+      <circle cx="44" cy="50" r="2" fill="white"/>
+      <circle cx="56" cy="50" r="2" fill="white"/>
       
       {/* Nose */}
-      <ellipse cx="50" cy="52" rx="2" ry="1.5" fill="currentColor" opacity="0.7"/>
-      
-      {/* Deer body */}
-      <ellipse cx="50" cy="75" rx="12" ry="18" fill="currentColor" opacity="0.8"/>
-      
-      {/* Legs */}
-      <rect x="42" y="88" width="3" height="8" fill="currentColor" rx="1.5"/>
-      <rect x="47" y="88" width="3" height="8" fill="currentColor" rx="1.5"/>
-      <rect x="52" y="88" width="3" height="8" fill="currentColor" rx="1.5"/>
-      <rect x="57" y="88" width="3" height="8" fill="currentColor" rx="1.5"/>
+      <ellipse cx="50" cy="58" rx="1.5" ry="1" fill="white"/>
     </svg>
   );
 };
