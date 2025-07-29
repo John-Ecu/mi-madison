@@ -1,5 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Home, Building2, Truck, Wrench } from "lucide-react";
+import kitchenImage from "@/assets/kitchen-cleaning.jpg";
+import officeImage from "@/assets/office-cleaning.jpg";
+import bathroomImage from "@/assets/bathroom-cleaning.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -62,6 +65,28 @@ const ServicesSection = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Service showcase images */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-center mb-8 text-primary">Our Work Speaks for Itself</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <img src={kitchenImage} alt="Professional kitchen cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
+              <h4 className="font-semibold text-primary">Kitchen Deep Clean</h4>
+              <p className="text-sm text-muted-foreground">Sparkling countertops and appliances</p>
+            </div>
+            <div className="text-center">
+              <img src={bathroomImage} alt="Bathroom deep cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
+              <h4 className="font-semibold text-primary">Bathroom Restoration</h4>
+              <p className="text-sm text-muted-foreground">Sanitized and gleaming surfaces</p>
+            </div>
+            <div className="text-center">
+              <img src={officeImage} alt="Commercial office cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
+              <h4 className="font-semibold text-primary">Commercial Spaces</h4>
+              <p className="text-sm text-muted-foreground">Professional business environments</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
