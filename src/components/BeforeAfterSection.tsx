@@ -1,6 +1,11 @@
 import bathroomTubBefore from "@/assets/bathroom-tub-before.jpg";
 import bathroomTubAfter from "@/assets/bathroom-tub-after.jpg";
-import deepCleanBefore from "@/assets/deep-clean-apartment-before.jpg";
+import deepCleanLivingBefore from "@/assets/deep-clean-living-before.jpg";
+import deepCleanLivingAfter from "@/assets/deep-clean-living-after.jpg";
+import deepCleanKitchenBefore from "@/assets/deep-clean-kitchen-before.jpg";
+import deepCleanKitchenAfter from "@/assets/deep-clean-kitchen-after.jpg";
+import deepCleanBathroomBefore from "@/assets/deep-clean-bathroom-before.jpg";
+import deepCleanBathroomAfter from "@/assets/deep-clean-bathroom-after.jpg";
 
 const BeforeAfterSection = () => {
   const beforeAfterExamples = [
@@ -9,6 +14,24 @@ const BeforeAfterSection = () => {
       description: "Expert cleaning removing stubborn stains and buildup, restoring bathtubs to pristine condition",
       before: bathroomTubBefore,
       after: bathroomTubAfter
+    },
+    {
+      title: "Deep Clean - Living Room",
+      description: "Complete transformation from cluttered and dirty to spotless and organized",
+      before: deepCleanLivingBefore,
+      after: deepCleanLivingAfter
+    },
+    {
+      title: "Deep Clean - Kitchen",
+      description: "Professional deep cleaning bringing kitchens back to pristine condition",
+      before: deepCleanKitchenBefore,
+      after: deepCleanKitchenAfter
+    },
+    {
+      title: "Deep Clean - Bathroom",
+      description: "Thorough bathroom cleaning and sanitization for a fresh, clean space",
+      before: deepCleanBathroomBefore,
+      after: deepCleanBathroomAfter
     }
   ];
 
@@ -55,24 +78,6 @@ const BeforeAfterSection = () => {
               </div>
             </div>
           ))}
-
-          {/* Deep Clean Example */}
-          <div className="max-w-5xl mx-auto">
-            <h3 className="text-2xl font-bold text-center mb-2 text-primary">Deep Clean Apartment</h3>
-            <p className="text-center text-muted-foreground mb-8">Comprehensive deep cleaning bringing spaces back to life</p>
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <img 
-                  src={deepCleanBefore} 
-                  alt="Deep clean apartment transformation"
-                  className="w-full h-96 object-cover rounded-lg shadow-lg"
-                />
-                <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold">
-                  Before Deep Clean
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
