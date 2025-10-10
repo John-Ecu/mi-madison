@@ -71,7 +71,11 @@ const PricingSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" className="text-lg px-8 py-3">
+          <Button 
+            size="lg" 
+            className="text-lg px-8 py-3"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Get Custom Quote
           </Button>
           <p className="text-sm text-muted-foreground mt-4">

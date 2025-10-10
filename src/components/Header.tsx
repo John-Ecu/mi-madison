@@ -20,7 +20,11 @@ const Header = () => {
             <a href="#about" className="hover:opacity-80 transition-opacity">About</a>
             <a href="#contact" className="hover:opacity-80 transition-opacity">Contact</a>
           </nav>
-          <Button variant="secondary" className="hidden md:block">
+          <Button 
+            variant="secondary" 
+            className="hidden md:block"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Get Quote
           </Button>
         </div>

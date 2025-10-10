@@ -18,10 +18,20 @@ const HeroSection = () => {
               all the cleaning, dusting, and organizing so you can focus on what matters most to you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="text-lg px-8 py-3"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Get Free Quote
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 py-3 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Our Services
               </Button>
             </div>
