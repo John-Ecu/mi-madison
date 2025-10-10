@@ -7,6 +7,7 @@ import bathroomImage from "@/assets/bathroom-cleaning.jpg";
 import windowImage1 from "@/assets/window-cleaning-1.jpg";
 import windowImage2 from "@/assets/window-cleaning-2.jpg";
 import windowImage3 from "@/assets/window-cleaning-3.jpg";
+import houseCleaningExample from "@/assets/house-cleaning-example.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -14,7 +15,8 @@ const ServicesSection = () => {
       icon: Home,
       title: "House Cleaning",
       description: "Comprehensive residential cleaning services for your home. We handle everything from regular maintenance to deep cleaning.",
-      features: ["Regular maintenance cleaning", "Deep cleaning services", "Move-in/move-out cleaning", "Post-construction cleanup"]
+      features: ["Regular maintenance cleaning", "Deep cleaning services", "Move-in/move-out cleaning", "Post-construction cleanup"],
+      image: houseCleaningExample
     },
     {
       icon: Building2,
@@ -39,6 +41,18 @@ const ServicesSection = () => {
       title: "Window Cleaning",
       description: "Professional window cleaning services for crystal-clear views. Contact us for a personalized quote.",
       features: ["Interior and exterior cleaning", "High-rise window access", "Screen cleaning", "Streak-free shine"]
+    },
+    {
+      icon: Sparkles,
+      title: "Power Washing",
+      description: "High-pressure water cleaning for exterior surfaces, driveways, decks, and more.",
+      features: ["Driveway and sidewalk cleaning", "Deck and patio washing", "Exterior wall cleaning", "Gutter cleaning"]
+    },
+    {
+      icon: Home,
+      title: "Residential Painting",
+      description: "Professional painting services to refresh and transform your home's interior and exterior.",
+      features: ["Interior room painting", "Exterior house painting", "Trim and accent work", "Color consultation"]
     }
   ];
 
@@ -53,7 +67,7 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="border-2 border-primary/20 hover:border-primary/40 transition-colors">
               <CardHeader className="text-center">
@@ -63,6 +77,9 @@ const ServicesSection = () => {
                 <CardTitle className="text-xl text-primary">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
+                {service.image && (
+                  <img src={service.image} alt={service.title} className="w-full h-32 object-cover rounded-lg mb-4" />
+                )}
                 <p className="text-muted-foreground mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
