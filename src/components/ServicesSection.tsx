@@ -27,15 +27,9 @@ const ServicesSection = () => {
     },
     {
       icon: Building2,
-      title: "Commercial Cleaning",
+      title: "Commercial Cleaning 🏢",
       description: "Professional commercial cleaning for offices, retail spaces, and business facilities.",
-      features: ["Office cleaning", "Retail space maintenance", "Medical facility cleaning", "Restaurant cleaning"]
-    },
-    {
-      icon: Truck,
-      title: "Move-out Cleaning",
-      description: "Thorough move-out cleaning services to help you get your security deposit back.",
-      features: ["Complete property cleaning", "Appliance cleaning", "Carpet cleaning", "Window cleaning"]
+      features: ["Office cleaning 🖥️", "Retail space maintenance 🏪", "Medical facility cleaning 🏥", "Restaurant cleaning 🍽️"]
     },
     {
       icon: Wrench,
