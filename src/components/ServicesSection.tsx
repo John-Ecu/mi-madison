@@ -13,6 +13,8 @@ import paintingRedDoor from "@/assets/painting-red-door.jpg";
 import paintingPorch from "@/assets/painting-porch.jpg";
 import powerWashingHouse from "@/assets/power-washing-house.jpg";
 import powerWashingEquipment from "@/assets/power-washing-equipment.jpg";
+import windowCleaningMilwaukee1 from "@/assets/window-cleaning-milwaukee-1.jpg";
+import windowCleaningMilwaukee2 from "@/assets/window-cleaning-milwaukee-2.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -44,8 +46,9 @@ const ServicesSection = () => {
     {
       icon: Sparkles,
       title: "Window Cleaning",
-      description: "Professional window cleaning services for crystal-clear views. Contact us for a personalized quote.",
-      features: ["Interior and exterior cleaning", "High-rise window access", "Screen cleaning", "Streak-free shine"]
+      description: "Our team delivers crystal-clear results that keep customers coming back - we've even got Milwaukee folks willing to make the trip! That's because our skilled cleaners know exactly how to get windows squeaky clean, every single time.",
+      features: ["Interior and exterior cleaning", "High-rise window access", "Screen cleaning", "Streak-free shine"],
+      images: [windowCleaningMilwaukee1, windowCleaningMilwaukee2]
     },
     {
       icon: Sparkles,
