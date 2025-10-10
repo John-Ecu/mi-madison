@@ -1,8 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Home, Building2, Truck, Wrench } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Home, Building2, Truck, Wrench, Sparkles } from "lucide-react";
 import kitchenImage from "@/assets/kitchen-cleaning.jpg";
 import officeImage from "@/assets/office-cleaning.jpg";
 import bathroomImage from "@/assets/bathroom-cleaning.jpg";
+import windowImage1 from "@/assets/window-cleaning-1.jpg";
+import windowImage2 from "@/assets/window-cleaning-2.jpg";
+import windowImage3 from "@/assets/window-cleaning-3.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -29,6 +33,12 @@ const ServicesSection = () => {
       title: "Construction Cleanup",
       description: "Specialized post-construction cleaning for residential and commercial properties.",
       features: ["Debris removal", "Dust elimination", "Surface cleaning", "Final touch-ups"]
+    },
+    {
+      icon: Sparkles,
+      title: "Window Cleaning",
+      description: "Professional window cleaning services for crystal-clear views. Contact us for a personalized quote.",
+      features: ["Interior and exterior cleaning", "High-rise window access", "Screen cleaning", "Streak-free shine"]
     }
   ];
 
@@ -43,7 +53,7 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="border-2 border-primary/20 hover:border-primary/40 transition-colors">
               <CardHeader className="text-center">
@@ -86,6 +96,30 @@ const ServicesSection = () => {
               <h4 className="font-semibold text-primary">Commercial Spaces</h4>
               <p className="text-sm text-muted-foreground">Professional business environments</p>
             </div>
+          </div>
+        </div>
+
+        {/* Window Cleaning Showcase */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-center mb-4 text-primary">Professional Window Cleaning</h3>
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Crystal-clear windows that transform your space. Contact us today for a customized quote based on your specific needs.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="text-center">
+              <img src={windowImage1} alt="Professional window cleaning - exterior view" className="w-full h-64 object-cover rounded-lg shadow-md mb-4" />
+            </div>
+            <div className="text-center">
+              <img src={windowImage2} alt="Crystal clear window cleaning results" className="w-full h-64 object-cover rounded-lg shadow-md mb-4" />
+            </div>
+            <div className="text-center">
+              <img src={windowImage3} alt="Commercial window cleaning services" className="w-full h-64 object-cover rounded-lg shadow-md mb-4" />
+            </div>
+          </div>
+          <div className="text-center">
+            <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              Contact Us for a Quote
+            </Button>
           </div>
         </div>
       </div>
