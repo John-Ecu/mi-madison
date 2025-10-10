@@ -8,6 +8,7 @@ import windowImage1 from "@/assets/window-cleaning-1.jpg";
 import windowImage2 from "@/assets/window-cleaning-2.jpg";
 import windowImage3 from "@/assets/window-cleaning-3.jpg";
 import houseCleaningExample from "@/assets/house-cleaning-example.jpg";
+import houseCleaningLivingRoom from "@/assets/house-cleaning-living-room.jpg";
 import paintingRedDoor from "@/assets/painting-red-door.jpg";
 import paintingPorch from "@/assets/painting-porch.jpg";
 
@@ -15,10 +16,10 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Home,
-      title: "House Cleaning",
+      title: "House Cleaning 🧹",
       description: "Comprehensive residential cleaning services for your home. We handle everything from regular maintenance to deep cleaning.",
       features: ["Regular maintenance cleaning", "Deep cleaning services", "Move-in/move-out cleaning", "Post-construction cleanup"],
-      image: houseCleaningExample
+      images: [houseCleaningExample, houseCleaningLivingRoom]
     },
     {
       icon: Building2,
@@ -80,9 +81,6 @@ const ServicesSection = () => {
                 <CardTitle className="text-xl text-primary">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                {service.image && (
-                  <img src={service.image} alt={service.title} className="w-full h-32 object-cover rounded-lg mb-4" />
-                )}
                 {service.images && (
                   <div className="grid grid-cols-2 gap-2 mb-4">
                     {service.images.map((img, imgIndex) => (
