@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, CreditCard, DollarSign, Check } from "lucide-react";
+import { Phone, Mail, MapPin, DollarSign } from "lucide-react";
 
 const ContactSection = () => {
   const teamMembers = [
@@ -25,113 +25,69 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-primary text-primary-foreground">
+    <section id="contact" className="py-16 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Contact Our Team</h2>
-          <p className="text-xl opacity-90">
-            Thank you for your time and interest in M&I Professional Services. 
-            We can't wait to get in touch and work together!
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-3">Contact Our Team</h2>
+          <p className="text-lg opacity-90">
+            Thank you for your interest in M&I Professional Services. We can't wait to work together!
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div>
-            <h3 className="text-2xl font-bold mb-8">Get in Touch</h3>
-            <div className="space-y-6">
-              {teamMembers.map((member, index) => (
-                <Card key={index} className="bg-primary-foreground/10 border-primary-foreground/20">
-                  <CardHeader>
-                    <CardTitle className="text-primary-foreground">{member.name}</CardTitle>
-                    <p className="text-primary-foreground/80">{member.title}</p>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div className="flex items-center">
-                      <Phone className="w-4 h-4 mr-3" />
-                      <a href={`tel:${member.phone}`} className="hover:opacity-80">
-                        {member.phone}
-                      </a>
-                    </div>
-                    <div className="flex items-center">
-                      <Mail className="w-4 h-4 mr-3" />
-                      <a href={`mailto:${member.email}`} className="hover:opacity-80 break-all">
-                        {member.email}
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            
-            <div className="mt-8 p-6 bg-primary-foreground/10 rounded-lg">
-              <div className="flex items-center mb-4">
-                <MapPin className="w-5 h-5 mr-3" />
-                <h4 className="text-lg font-semibold">Service Area</h4>
-              </div>
-              <p className="opacity-90">Madison, Wisconsin & surrounding Dane County area</p>
-              <p className="opacity-90 mt-2">Available for travel throughout Wisconsin</p>
-            </div>
-          </div>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-8">
+          {teamMembers.map((member, index) => (
+            <Card key={index} className="bg-primary-foreground/10 border-primary-foreground/20 hover:bg-primary-foreground/15 transition-all">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-primary-foreground text-lg">{member.name}</CardTitle>
+                <p className="text-primary-foreground/80 text-sm">{member.title}</p>
+              </CardHeader>
+              <CardContent className="space-y-2 text-sm">
+                <a href={`tel:${member.phone}`} className="flex items-center hover:opacity-80 transition-opacity">
+                  <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
+                  <span>{member.phone}</span>
+                </a>
+                <a href={`mailto:${member.email}`} className="flex items-center hover:opacity-80 transition-opacity">
+                  <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
+                  <span className="break-all text-xs">{member.email}</span>
+                </a>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
-          {/* Payment Methods */}
-          <div>
-            <h3 className="text-2xl font-bold mb-8">Payment Methods</h3>
-            
-            <div className="space-y-6">
-              <Card className="bg-primary-foreground/10 border-primary-foreground/20">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-primary-foreground">
-                    <DollarSign className="w-5 h-5 mr-2" />
-                    Zelle Information
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-primary-foreground">
-                  <p><strong>Email:</strong> john.castroflores2000@gmail.com</p>
-                  <p><strong>Phone:</strong> 608.358.3706</p>
-                </CardContent>
-              </Card>
+        <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
+          <Card className="bg-primary-foreground/10 border-primary-foreground/20">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center text-primary-foreground text-lg">
+                <DollarSign className="w-5 h-5 mr-2" />
+                Zelle Payment
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-primary-foreground text-sm space-y-1">
+              <p><strong>Email:</strong> john.castroflores2000@gmail.com</p>
+              <p><strong>Phone:</strong> 608.358.3706</p>
+            </CardContent>
+          </Card>
 
-              <Card className="bg-primary-foreground/10 border-primary-foreground/20">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-primary-foreground">
-                    <CreditCard className="w-5 h-5 mr-2" />
-                    Wire Transfer Information
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-primary-foreground space-y-2">
-                  <p><strong>Bank:</strong> Summit Credit Union</p>
-                  <p><strong>Routing #:</strong> Contact Member</p>
-                  <p><strong>Account #:</strong> Contact Member</p>
-                  <p><strong>Name:</strong> John Castro Flores</p>
-                  <p><strong>Address:</strong> 1 Birchwood Circle, Madison, Wisconsin, 53704</p>
-                </CardContent>
-              </Card>
+          <Card className="bg-primary-foreground/10 border-primary-foreground/20">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center text-primary-foreground text-lg">
+                <MapPin className="w-5 h-5 mr-2" />
+                Service Area
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-primary-foreground text-sm">
+              <p className="opacity-90">Madison, WI & Dane County</p>
+              <p className="opacity-90 mt-1">Travel available throughout Wisconsin</p>
+            </CardContent>
+          </Card>
+        </div>
 
-              <Card className="bg-primary-foreground/10 border-primary-foreground/20">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-primary-foreground">
-                    <Check className="w-5 h-5 mr-2" />
-                    How to Pay with a Check
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-primary-foreground">
-                  <p className="mb-2">Checks should be written out to <strong>M&I Professional Services</strong></p>
-                  <p className="mb-2">Send to the following email:</p>
-                  <p className="font-semibold">jc.miprofessionalservices@gmail.com</p>
-                  <p className="text-sm mt-4 opacity-80">
-                    Any check already sent to the email above should be disposed of properly - DO NOT SEND CHECK THROUGH MAIL
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="mt-8 text-center">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-                Request Quote Today
-              </Button>
-            </div>
-          </div>
+        <div className="text-center mt-8">
+          <p className="text-sm opacity-80 mb-4">Contact team members for approved payment methods</p>
+          <Button size="lg" variant="secondary" className="px-8">
+            Request Quote Today
+          </Button>
         </div>
       </div>
     </section>
