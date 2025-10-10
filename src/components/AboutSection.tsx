@@ -18,18 +18,16 @@ const AboutSection = () => {
                 <div>
                   <h3 className="text-2xl font-bold mb-4 text-primary">Our Story</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                    No job is too small for our amazing staff at M&I! Need something cleaned? Contact us for quotes! 
-                    We are a small family company! We operate in the Dane County area and are willing to travel 
-                    anywhere within Wisconsin. We are professionals who understand the importance of a clean environment. 
-                    That's why we do all the cleaning, dusting, sanitizing, and organizing so you and your employees 
-                    can focus on the tasks at hand.
+                    No job is too small for us! We're a small family company based in Dane County, and we're 
+                    happy to travel anywhere in Wisconsin. Whether it's your home or your business, we treat 
+                    every space like it's our own. Our goal is simple: handle all the cleaning, dusting, and 
+                    organizing so you can focus on what really matters.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    You can rest assured that our cleaning is residential, commercial, or private building is in good hands! 
-                    We offer a range of services that we believe will fully meet your needs, whether you own homes or buildings 
-                    that are too big or small for our skilled and experienced staff. This includes banks, auto shops, warehouses, 
-                    construction sites, hospitals, etc. We look forward to working with you and keeping your place beautiful. 
-                    We have many clients and if you need any references from them, please do not hesitate to contact us.
+                    Your property is in good hands with us - whether it's residential, commercial, or anything in between. 
+                    We work with all kinds of clients: homes, offices, banks, auto shops, warehouses, construction sites, 
+                    hospitals, and more. Have questions or need references? Just give us a call. We'd love to hear from you 
+                    and show you what we can do!
                   </p>
                 </div>
               </div>

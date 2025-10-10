@@ -13,11 +13,9 @@ const HeroSection = () => {
             </div>
             <h3 className="text-3xl font-semibold mb-6">Your Trusted Family-Owned Cleaning Service</h3>
             <p className="text-xl mb-8 leading-relaxed">
-              We are a small family company operating in the Dane County area and are 
-              willing to travel anywhere within Wisconsin. We are professionals who 
-              understand the importance of a clean environment. That's why we do all the 
-              cleaning, dusting, sanitizing, and organizing so you and your employees 
-              can focus on the tasks at hand.
+              We're a small family company based in Dane County, serving homes and businesses 
+              throughout Wisconsin. We know how important a clean space is - that's why we handle 
+              all the cleaning, dusting, and organizing so you can focus on what matters most to you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="secondary" className="text-lg px-8 py-3">

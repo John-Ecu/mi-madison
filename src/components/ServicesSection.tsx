@@ -41,21 +41,21 @@ const ServicesSection = () => {
     {
       icon: Sparkles,
       title: "Window Cleaning",
-      description: "Our team delivers crystal-clear results that keep customers coming back - we've even got Milwaukee folks willing to make the trip! That's because our skilled cleaners know exactly how to get windows squeaky clean, every single time.",
+      description: "We're known for crystal-clear results! In fact, we've got customers from Milwaukee who make the drive to Madison just for our window cleaning. Our team knows all the tricks to get windows squeaky clean, inside and out.",
       features: ["Interior and exterior cleaning", "High-rise window access", "Screen cleaning", "Streak-free shine"],
       images: [windowCleaningMilwaukee1, windowCleaningMilwaukee2]
     },
     {
       icon: Sparkles,
       title: "Power Washing",
-      description: "High-pressure water cleaning for exterior surfaces, driveways, decks, and more. We power washed the whole front house before painting it red and white! One happy customer!",
+      description: "High-pressure cleaning for driveways, decks, siding, and more. We recently power washed an entire house before painting it - the transformation was incredible! It's amazing what a difference a good power wash makes.",
       features: ["Driveway and sidewalk cleaning", "Deck and patio washing", "Exterior wall cleaning", "Gutter cleaning"],
       images: [powerWashingHouse, powerWashingEquipment]
     },
     {
       icon: Home,
       title: "Residential Painting",
-      description: "Professional painting services to refresh and transform your home's interior and exterior. We painted this front door in a bright Where's Waldo red and refreshed all the white trim on the front porch.",
+      description: "Fresh paint can completely transform a space! We handle interior and exterior painting projects. Recently painted a front door in a bold, bright red and refreshed all the white trim - the homeowners absolutely loved it!",
       features: ["Interior room painting", "Exterior house painting", "Trim and accent work", "Color consultation"],
       images: [paintingRedDoor, paintingPorch]
     }
@@ -67,8 +67,8 @@ const ServicesSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-primary">Our Cleaning Services</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We offer a range of services that we believe will fully meet your needs, 
-            whether you own a home or buildings that are too big or small for our skilled and experienced staff.
+            From cozy homes to large commercial spaces, we've got you covered. 
+            No job is too big or too small for our experienced team!
           </p>
         </div>
         
