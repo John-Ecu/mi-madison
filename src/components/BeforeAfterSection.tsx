@@ -1,18 +1,30 @@
 import { Card, CardContent } from "@/components/ui/card";
+import bathroomBefore from "@/assets/deep-clean-bathroom-before.jpg";
+import bathroomAfter from "@/assets/deep-clean-bathroom-after.jpg";
+import kitchenBefore from "@/assets/deep-clean-kitchen-before.jpg";
+import kitchenAfter from "@/assets/deep-clean-kitchen-after.jpg";
+import apartmentBefore from "@/assets/deep-clean-apartment-before.jpg";
+import apartmentAfter from "@/assets/deep-clean-apartment-after.jpg";
 
 const BeforeAfterSection = () => {
   const beforeAfterImages = [
     {
-      before: "/lovable-uploads/66bfe33a-3361-4dd3-84f8-29d679b5d629.png",
-      after: "/lovable-uploads/70e612cf-d82b-406d-bc7e-8b734b7d5ec2.png",
-      title: "Kitchen Transformation",
-      description: "Deep cleaning and sanitization bringing back the shine to countertops and appliances"
+      before: bathroomBefore,
+      after: bathroomAfter,
+      title: "Bathroom Deep Clean",
+      description: "Complete transformation from cluttered to spotless, with thorough sanitization and organization"
     },
     {
-      before: "/lovable-uploads/a8b52890-bb22-4b81-bd2a-d61ff209d86e.png",
-      after: "/lovable-uploads/dee0d1ce-fab0-4b20-8f8e-fd4f1361a80c.png",
-      title: "Bathroom Restoration",
-      description: "Complete scrubbing and disinfection for a spotless, hygienic bathroom"
+      before: kitchenBefore,
+      after: kitchenAfter,
+      title: "Kitchen Deep Clean",
+      description: "Professional deep cleaning removing all clutter, sanitizing surfaces, and restoring shine"
+    },
+    {
+      before: apartmentBefore,
+      after: apartmentAfter,
+      title: "Living Space Deep Clean",
+      description: "Complete apartment transformation from overwhelming mess to pristine living environment"
     }
   ];
 
