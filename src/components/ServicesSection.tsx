@@ -39,9 +39,10 @@ const ServicesSection = () => {
     },
     {
       icon: Wrench,
-      title: "Construction Cleanup",
-      description: "Specialized post-construction cleaning for residential and commercial properties.",
-      features: ["Debris removal", "Dust elimination", "Surface cleaning", "Final touch-ups"]
+      title: "Construction/Landscaping Cleanup",
+      description: "Specialized post-construction and landscaping cleanup for residential and commercial properties.",
+      features: ["Debris removal", "Dust elimination", "Surface cleaning", "Final touch-ups"],
+      video: "/construction-cleanup.mov"
     },
     {
       icon: Sparkles,
@@ -87,6 +88,18 @@ const ServicesSection = () => {
                 <CardTitle className="text-xl text-primary">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
+                {service.video && (
+                  <div className="mb-4">
+                    <video 
+                      src={service.video} 
+                      controls 
+                      className="w-full h-48 object-cover rounded-lg"
+                      preload="metadata"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                )}
                 {service.images && (
                   <div className="grid grid-cols-2 gap-2 mb-4">
                     {service.images.map((img, imgIndex) => (
