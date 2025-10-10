@@ -85,7 +85,12 @@ const ContactSection = () => {
 
         <div className="text-center mt-8">
           <p className="text-sm opacity-80 mb-4">Contact team members for approved payment methods</p>
-          <Button size="lg" variant="secondary" className="px-8">
+          <Button 
+            size="lg" 
+            variant="secondary" 
+            className="px-8"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Request Quote Today
           </Button>
         </div>
