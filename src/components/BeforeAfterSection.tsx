@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import bathroomBefore from "@/assets/deep-clean-bathroom-before.jpg";
 import bathroomAfter from "@/assets/deep-clean-bathroom-after.jpg";
+import bathroomTubBefore from "@/assets/bathroom-tub-before.jpg";
+import bathroomTubAfter from "@/assets/bathroom-tub-after.jpg";
 import kitchenBefore from "@/assets/deep-clean-kitchen-before.jpg";
 import kitchenAfter from "@/assets/deep-clean-kitchen-after.jpg";
 import apartmentBefore from "@/assets/deep-clean-apartment-before.jpg";
@@ -13,6 +15,12 @@ const BeforeAfterSection = () => {
       after: bathroomAfter,
       title: "Bathroom Deep Clean",
       description: "Complete transformation from cluttered to spotless, with thorough sanitization and organization"
+    },
+    {
+      before: bathroomTubBefore,
+      after: bathroomTubAfter,
+      title: "Bathtub Restoration",
+      description: "Expert cleaning removing stubborn stains and buildup, restoring bathtubs to pristine condition"
     },
     {
       before: kitchenBefore,
