@@ -11,6 +11,8 @@ import houseCleaningExample from "@/assets/house-cleaning-example.jpg";
 import houseCleaningLivingRoom from "@/assets/house-cleaning-living-room.jpg";
 import paintingRedDoor from "@/assets/painting-red-door.jpg";
 import paintingPorch from "@/assets/painting-porch.jpg";
+import powerWashingHouse from "@/assets/power-washing-house.jpg";
+import powerWashingEquipment from "@/assets/power-washing-equipment.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -48,8 +50,9 @@ const ServicesSection = () => {
     {
       icon: Sparkles,
       title: "Power Washing",
-      description: "High-pressure water cleaning for exterior surfaces, driveways, decks, and more.",
-      features: ["Driveway and sidewalk cleaning", "Deck and patio washing", "Exterior wall cleaning", "Gutter cleaning"]
+      description: "High-pressure water cleaning for exterior surfaces, driveways, decks, and more. We power washed the whole front house before painting it red and white! One happy customer!",
+      features: ["Driveway and sidewalk cleaning", "Deck and patio washing", "Exterior wall cleaning", "Gutter cleaning"],
+      images: [powerWashingHouse, powerWashingEquipment]
     },
     {
       icon: Home,
