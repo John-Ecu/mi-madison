@@ -1,12 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Home, Building2, Truck, Wrench, Sparkles } from "lucide-react";
+import { Home, Building2, Truck, Wrench } from "lucide-react";
 import kitchenImage from "@/assets/kitchen-cleaning.jpg";
 import officeImage from "@/assets/office-cleaning.jpg";
 import bathroomImage from "@/assets/bathroom-cleaning.jpg";
-import windowCleaning1 from "@/assets/window-cleaning-1.jpg";
-import windowCleaning2 from "@/assets/window-cleaning-2.jpg";
-import windowCleaning3 from "@/assets/window-cleaning-3.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -33,12 +29,6 @@ const ServicesSection = () => {
       title: "Construction Cleanup",
       description: "Specialized post-construction cleaning for residential and commercial properties.",
       features: ["Debris removal", "Dust elimination", "Surface cleaning", "Final touch-ups"]
-    },
-    {
-      icon: Sparkles,
-      title: "Window Cleaning",
-      description: "Professional window cleaning for residential and commercial properties. Contact us for a custom quote.",
-      features: ["Exterior window cleaning", "High-rise capabilities", "Streak-free results", "Custom quotes available"]
     }
   ];
 
@@ -95,30 +85,6 @@ const ServicesSection = () => {
               <img src={officeImage} alt="Commercial office cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
               <h4 className="font-semibold text-primary">Commercial Spaces</h4>
               <p className="text-sm text-muted-foreground">Professional business environments</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Window Cleaning Section */}
-        <div className="mt-20 bg-secondary/30 rounded-lg p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-primary mb-4">Professional Window Cleaning</h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-              We provide expert window cleaning services for buildings of all sizes. From residential homes to high-rise commercial properties, our experienced team delivers crystal-clear results.
-            </p>
-            <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              Contact Us for a Quote
-            </Button>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
-            <div className="overflow-hidden rounded-lg shadow-lg">
-              <img src={windowCleaning1} alt="Professional window cleaning service - exterior work" className="w-full h-64 object-cover" />
-            </div>
-            <div className="overflow-hidden rounded-lg shadow-lg">
-              <img src={windowCleaning2} alt="High-rise window cleaning with ladder" className="w-full h-64 object-cover" />
-            </div>
-            <div className="overflow-hidden rounded-lg shadow-lg">
-              <img src={windowCleaning3} alt="Commercial building window cleaning" className="w-full h-64 object-cover" />
             </div>
           </div>
         </div>
