@@ -8,6 +8,8 @@ import windowImage1 from "@/assets/window-cleaning-1.jpg";
 import windowImage2 from "@/assets/window-cleaning-2.jpg";
 import windowImage3 from "@/assets/window-cleaning-3.jpg";
 import houseCleaningExample from "@/assets/house-cleaning-example.jpg";
+import paintingRedDoor from "@/assets/painting-red-door.jpg";
+import paintingPorch from "@/assets/painting-porch.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -51,8 +53,9 @@ const ServicesSection = () => {
     {
       icon: Home,
       title: "Residential Painting",
-      description: "Professional painting services to refresh and transform your home's interior and exterior.",
-      features: ["Interior room painting", "Exterior house painting", "Trim and accent work", "Color consultation"]
+      description: "Professional painting services to refresh and transform your home's interior and exterior. We painted this front door in a bright Where's Waldo red and refreshed all the white trim on the front porch.",
+      features: ["Interior room painting", "Exterior house painting", "Trim and accent work", "Color consultation"],
+      images: [paintingRedDoor, paintingPorch]
     }
   ];
 
@@ -79,6 +82,13 @@ const ServicesSection = () => {
               <CardContent>
                 {service.image && (
                   <img src={service.image} alt={service.title} className="w-full h-32 object-cover rounded-lg mb-4" />
+                )}
+                {service.images && (
+                  <div className="grid grid-cols-2 gap-2 mb-4">
+                    {service.images.map((img, imgIndex) => (
+                      <img key={imgIndex} src={img} alt={`${service.title} example ${imgIndex + 1}`} className="w-full h-32 object-cover rounded-lg" />
+                    ))}
+                  </div>
                 )}
                 <p className="text-muted-foreground mb-4">{service.description}</p>
                 <ul className="space-y-2">
