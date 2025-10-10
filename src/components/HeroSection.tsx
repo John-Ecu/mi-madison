@@ -11,7 +11,7 @@ const HeroSection = () => {
               <DeerIcon className="w-16 h-16 mr-4" />
               <h2 className="text-5xl font-bold">M&I Professionals</h2>
             </div>
-            <h3 className="text-3xl font-semibold mb-6">Taking Over Madison!</h3>
+            <h3 className="text-3xl font-semibold mb-6">Your Trusted Family-Owned Cleaning Service</h3>
             <p className="text-xl mb-8 leading-relaxed">
               We are a small family company operating in the Dane County area and are 
               willing to travel anywhere within Wisconsin. We are professionals who 

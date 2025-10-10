@@ -11,8 +11,8 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-primary">M&I Professional Services LLC</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              Taking over Madison with professional cleaning services. 
-              Family-owned and operated since our founding.
+              A small family-owned company providing professional cleaning services. 
+              Proudly serving Madison and all of Wisconsin since our founding.
             </p>
             <p className="text-sm text-muted-foreground">
               Licensed, Insured & Bonded

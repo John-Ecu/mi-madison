@@ -10,7 +10,7 @@ const Header = () => {
             <DeerIcon className="w-10 h-10" />
             <div>
               <h1 className="text-2xl font-bold">M&I Professional Services LLC</h1>
-              <p className="text-sm opacity-90">Taking Over Madison!</p>
+              <p className="text-sm opacity-90">Small Family-Owned Company</p>
             </div>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
