@@ -3,7 +3,7 @@ import DeerIcon from "./DeerIcon";
 
 const Header = () => {
   return (
-    <header className="bg-primary text-primary-foreground">
+    <header className="sticky top-0 z-50 bg-primary text-primary-foreground shadow-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
