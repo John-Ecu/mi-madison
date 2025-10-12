@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <DeerIcon className="w-8 h-8 text-primary mr-3" />
+              <DeerIcon className="w-16 h-16 mr-3" />
               <h3 className="text-xl font-bold text-primary">M&I Professional Services LLC</h3>
             </div>
             <p className="text-muted-foreground mb-4">
