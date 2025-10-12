@@ -43,10 +43,6 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-primary/20 pt-8 mt-8 text-center">
-          <div className="flex justify-center items-center mb-4">
-            <DeerIcon className="w-6 h-6 text-primary mr-2" />
-            <DeerIcon className="w-6 h-6 text-primary" />
-          </div>
           <p className="text-muted-foreground">
             © 2024 M&I Professional Services LLC. All rights reserved.
           </p>
