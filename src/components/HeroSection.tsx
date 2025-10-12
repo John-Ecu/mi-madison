@@ -58,9 +58,6 @@ const HeroSection = () => {
                 </li>
               </ul>
             </div>
-            <div className="absolute -bottom-4 -right-4">
-              <DeerIcon className="w-20 h-20 opacity-30" />
-            </div>
           </div>
         </div>
       </div>
