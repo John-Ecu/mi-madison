@@ -6,9 +6,9 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-primary text-primary-foreground shadow-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <DeerIcon className="w-10 h-10" />
-            <div>
+          <div className="flex items-center space-x-4">
+            <DeerIcon className="w-16 h-16 object-contain" />
+            <div className="flex flex-col justify-center">
               <h1 className="text-2xl font-bold">M&I Professional Services LLC</h1>
               <p className="text-sm opacity-90">Small Family-Owned Company</p>
             </div>
