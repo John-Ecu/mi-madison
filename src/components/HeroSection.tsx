@@ -8,7 +8,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="flex items-center mb-6">
-              <DeerIcon className="w-16 h-16 mr-4" />
+              <DeerIcon className="w-16 h-16 object-contain mr-4" />
               <h2 className="text-5xl font-bold">M&I Professionals</h2>
             </div>
             <h3 className="text-3xl font-semibold mb-6">Your Trusted Family-Owned Cleaning Service</h3>
