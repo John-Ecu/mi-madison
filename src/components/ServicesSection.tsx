@@ -41,13 +41,6 @@ const ServicesSection = () => {
       description: "Specialized post-construction and landscaping cleanup for residential and commercial properties.",
       features: ["Debris removal", "Dust elimination", "Surface cleaning", "Final touch-ups"],
       video: "/construction-cleanup.mov"
-    },
-    {
-      icon: Home,
-      title: "Residential Painting",
-      description: "Fresh paint can completely transform a space! We handle interior and exterior painting projects.",
-      features: ["Interior room painting", "Exterior house painting", "Trim and accent work", "Color consultation"],
-      images: [paintingRedDoor, paintingPorch]
     }
   ];
 
@@ -83,6 +76,13 @@ const ServicesSection = () => {
       title: "Light Maintenance",
       description: "Small maintenance tasks that make a big difference. From changing light bulbs to minor repairs.",
       features: ["Light bulb replacement", "Minor fixture repairs", "General maintenance", "Property upkeep"]
+    },
+    {
+      icon: Home,
+      title: "Residential Painting",
+      description: "Fresh paint can completely transform a space! We handle interior and exterior painting projects.",
+      features: ["Interior room painting", "Exterior house painting", "Trim and accent work", "Color consultation"],
+      images: [paintingRedDoor, paintingPorch]
     }
   ];
 
