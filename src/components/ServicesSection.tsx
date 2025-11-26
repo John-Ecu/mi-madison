@@ -149,7 +149,7 @@ const ServicesSection = () => {
             </TabsTrigger>
             <TabsTrigger value="jj" className="py-4 text-base md:text-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
               J&amp;J Special Services
-              <span className="hidden sm:inline ml-1">- Maintenance</span>
+              <span className="hidden sm:inline ml-1">- Building Management</span>
             </TabsTrigger>
           </TabsList>
 
