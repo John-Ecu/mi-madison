@@ -30,7 +30,10 @@ const ContactSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-3">Contact Our Team</h2>
           <p className="text-lg opacity-90">
-            Thank you for your interest in M&I Professional Services. We can't wait to work together!
+            Thank you for your interest in M&amp;I Professionals and J&amp;J Special Services. We can't wait to work together!
+          </p>
+          <p className="text-base opacity-80 mt-2">
+            Same team, same great service - whether you need cleaning or maintenance!
           </p>
         </div>
 
@@ -77,7 +80,7 @@ const ContactSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="text-primary-foreground text-sm">
-              <p className="opacity-90">Madison, WI & Dane County</p>
+              <p className="opacity-90">Madison, WI &amp; Dane County</p>
               <p className="opacity-90 mt-1">Travel available throughout Wisconsin</p>
             </CardContent>
           </Card>

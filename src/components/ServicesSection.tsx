@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Home, Building2, Truck, Wrench, Sparkles } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Home, Building2, Truck, Wrench, Sparkles, TreeDeciduous, Snowflake, Lightbulb } from "lucide-react";
 import kitchenImage from "@/assets/kitchen-cleaning.jpg";
 import officeImage from "@/assets/office-cleaning.jpg";
 import bathroomImage from "@/assets/bathroom-cleaning.jpg";
@@ -17,7 +19,9 @@ import windowCleaningMilwaukee1 from "@/assets/window-cleaning-milwaukee-1.jpg";
 import windowCleaningMilwaukee2 from "@/assets/window-cleaning-milwaukee-2.jpg";
 
 const ServicesSection = () => {
-  const services = [
+  const [activeTab, setActiveTab] = useState("mi");
+
+  const miServices = [
     {
       icon: Home,
       title: "House Cleaning 🧹",
@@ -32,133 +36,185 @@ const ServicesSection = () => {
       features: ["Office cleaning 🖥️", "Retail space maintenance 🏪", "Medical facility cleaning 🏥", "Restaurant cleaning 🍽️"]
     },
     {
-      icon: Wrench,
+      icon: Truck,
       title: "Construction/Landscaping Cleanup",
       description: "Specialized post-construction and landscaping cleanup for residential and commercial properties.",
       features: ["Debris removal", "Dust elimination", "Surface cleaning", "Final touch-ups"],
       video: "/construction-cleanup.mov"
     },
     {
-      icon: Sparkles,
-      title: "Window Cleaning",
-      description: "We're known for crystal-clear results! In fact, we've got customers from Milwaukee who make the drive to Madison just for our window cleaning. Our team knows all the tricks to get windows squeaky clean, inside and out.",
-      features: ["Interior and exterior cleaning", "High-rise window access", "Screen cleaning", "Streak-free shine"],
-      images: [windowCleaningMilwaukee1, windowCleaningMilwaukee2]
-    },
-    {
-      icon: Sparkles,
-      title: "Power Washing",
-      description: "High-pressure cleaning for driveways, decks, siding, and more. We recently power washed an entire house before painting it - the transformation was incredible! It's amazing what a difference a good power wash makes.",
-      features: ["Driveway and sidewalk cleaning", "Deck and patio washing", "Exterior wall cleaning", "Gutter cleaning"],
-      images: [powerWashingHouse, powerWashingEquipment]
-    },
-    {
       icon: Home,
       title: "Residential Painting",
-      description: "Fresh paint can completely transform a space! We handle interior and exterior painting projects. Recently painted a front door in a bold, bright red and refreshed all the white trim - the homeowners absolutely loved it!",
+      description: "Fresh paint can completely transform a space! We handle interior and exterior painting projects.",
       features: ["Interior room painting", "Exterior house painting", "Trim and accent work", "Color consultation"],
       images: [paintingRedDoor, paintingPorch]
     }
   ];
 
+  const jjServices = [
+    {
+      icon: Sparkles,
+      title: "Window Cleaning",
+      description: "We're known for crystal-clear results! In fact, we've got customers from Milwaukee who make the drive to Madison just for our window cleaning.",
+      features: ["Interior and exterior cleaning", "High-rise window access", "Screen cleaning", "Streak-free shine"],
+      images: [windowCleaningMilwaukee1, windowCleaningMilwaukee2]
+    },
+    {
+      icon: Wrench,
+      title: "Power Washing",
+      description: "High-pressure cleaning for driveways, decks, siding, and more. It's amazing what a difference a good power wash makes.",
+      features: ["Driveway and sidewalk cleaning", "Deck and patio washing", "Exterior wall cleaning", "Gutter cleaning"],
+      images: [powerWashingHouse, powerWashingEquipment]
+    },
+    {
+      icon: TreeDeciduous,
+      title: "Tree Trimming",
+      description: "Keep your property looking neat and safe with professional tree trimming services.",
+      features: ["Branch trimming", "Tree shaping", "Dead limb removal", "Hedge maintenance"]
+    },
+    {
+      icon: Snowflake,
+      title: "Snow Shoveling",
+      description: "Don't let winter slow you down! We provide reliable snow removal services for residential and commercial properties.",
+      features: ["Driveway clearing", "Sidewalk shoveling", "Entrance clearing", "Salt application"]
+    },
+    {
+      icon: Lightbulb,
+      title: "Light Maintenance",
+      description: "Small maintenance tasks that make a big difference. From changing light bulbs to minor repairs.",
+      features: ["Light bulb replacement", "Minor fixture repairs", "General maintenance", "Property upkeep"]
+    }
+  ];
+
+  const renderServiceCards = (services: typeof miServices) => (
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service, index) => (
+        <Card key={index} className="border-2 border-primary/20 hover:border-primary/40 transition-colors">
+          <CardHeader className="text-center">
+            <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
+              <service.icon className="w-8 h-8 text-primary" />
+            </div>
+            <CardTitle className="text-xl text-primary">{service.title}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {service.video && (
+              <div className="mb-4">
+                <video 
+                  src={service.video} 
+                  controls 
+                  className="w-full h-48 object-cover rounded-lg"
+                  preload="metadata"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            )}
+            {service.images && (
+              <div className="grid grid-cols-2 gap-2 mb-4">
+                {service.images.map((img, imgIndex) => (
+                  <img key={imgIndex} src={img} alt={`${service.title} example ${imgIndex + 1}`} className="w-full h-32 object-cover rounded-lg" />
+                ))}
+              </div>
+            )}
+            <p className="text-muted-foreground mb-4">{service.description}</p>
+            <ul className="space-y-2">
+              {service.features.map((feature, featureIndex) => (
+                <li key={featureIndex} className="flex items-center text-sm">
+                  <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  );
+
   return (
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-primary">Our Cleaning Services</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4 text-primary">Our Services</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From cozy homes to large commercial spaces, we've got you covered. 
-            No job is too big or too small for our experienced team!
+            Two family companies, one commitment to excellence. Choose below to explore our offerings.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="border-2 border-primary/20 hover:border-primary/40 transition-colors">
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
-                  <service.icon className="w-8 h-8 text-primary" />
+
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <TabsList className="grid w-full max-w-xl mx-auto grid-cols-2 mb-12 h-auto">
+            <TabsTrigger value="mi" className="py-4 text-base md:text-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+              M&amp;I Professionals
+              <span className="hidden sm:inline ml-1">- Cleaning</span>
+            </TabsTrigger>
+            <TabsTrigger value="jj" className="py-4 text-base md:text-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+              J&amp;J Special Services
+              <span className="hidden sm:inline ml-1">- Maintenance</span>
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="mi" className="mt-0">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-primary mb-2">M&amp;I Professional Services LLC</h3>
+              <p className="text-muted-foreground">Your trusted cleaning experts - from cozy homes to large commercial spaces</p>
+            </div>
+            {renderServiceCards(miServices)}
+
+            {/* M&I Service showcase images */}
+            <div className="mt-16">
+              <h3 className="text-2xl font-bold text-center mb-8 text-primary">Our Work Speaks for Itself</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <img src={kitchenImage} alt="Professional kitchen cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
+                  <h4 className="font-semibold text-primary">Kitchen Deep Clean</h4>
+                  <p className="text-sm text-muted-foreground">Sparkling countertops and appliances</p>
                 </div>
-                <CardTitle className="text-xl text-primary">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {service.video && (
-                  <div className="mb-4">
-                    <video 
-                      src={service.video} 
-                      controls 
-                      className="w-full h-48 object-cover rounded-lg"
-                      preload="metadata"
-                    >
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                )}
-                {service.images && (
-                  <div className="grid grid-cols-2 gap-2 mb-4">
-                    {service.images.map((img, imgIndex) => (
-                      <img key={imgIndex} src={img} alt={`${service.title} example ${imgIndex + 1}`} className="w-full h-32 object-cover rounded-lg" />
-                    ))}
-                  </div>
-                )}
-                <p className="text-muted-foreground mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                <div className="text-center">
+                  <img src={bathroomImage} alt="Bathroom deep cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
+                  <h4 className="font-semibold text-primary">Bathroom Restoration</h4>
+                  <p className="text-sm text-muted-foreground">Sanitized and gleaming surfaces</p>
+                </div>
+                <div className="text-center">
+                  <img src={officeImage} alt="Commercial office cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
+                  <h4 className="font-semibold text-primary">Commercial Spaces</h4>
+                  <p className="text-sm text-muted-foreground">Professional business environments</p>
+                </div>
+              </div>
+            </div>
+          </TabsContent>
 
-        {/* Service showcase images */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center mb-8 text-primary">Our Work Speaks for Itself</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <img src={kitchenImage} alt="Professional kitchen cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
-              <h4 className="font-semibold text-primary">Kitchen Deep Clean</h4>
-              <p className="text-sm text-muted-foreground">Sparkling countertops and appliances</p>
+          <TabsContent value="jj" className="mt-0">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-primary mb-2">J&amp;J Special Services</h3>
+              <p className="text-muted-foreground">Building maintenance, outdoor services, and specialty work</p>
             </div>
-            <div className="text-center">
-              <img src={bathroomImage} alt="Bathroom deep cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
-              <h4 className="font-semibold text-primary">Bathroom Restoration</h4>
-              <p className="text-sm text-muted-foreground">Sanitized and gleaming surfaces</p>
-            </div>
-            <div className="text-center">
-              <img src={officeImage} alt="Commercial office cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
-              <h4 className="font-semibold text-primary">Commercial Spaces</h4>
-              <p className="text-sm text-muted-foreground">Professional business environments</p>
-            </div>
-          </div>
-        </div>
+            {renderServiceCards(jjServices)}
 
-        {/* Window Cleaning Showcase */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center mb-4 text-primary">Professional Window Cleaning</h3>
-          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Crystal-clear windows that transform your space. Contact us today for a customized quote based on your specific needs.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div className="text-center">
-              <img src={windowImage1} alt="Professional window cleaning - exterior view" className="w-full h-64 object-cover rounded-lg shadow-md mb-4" />
+            {/* J&J Window Cleaning Showcase */}
+            <div className="mt-16">
+              <h3 className="text-2xl font-bold text-center mb-4 text-primary">Professional Window Cleaning</h3>
+              <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Crystal-clear windows that transform your space. Contact us today for a customized quote.
+              </p>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <img src={windowImage1} alt="Professional window cleaning - exterior view" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                </div>
+                <div className="text-center">
+                  <img src={windowImage2} alt="Crystal clear window cleaning results" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                </div>
+                <div className="text-center">
+                  <img src={windowImage3} alt="Commercial window cleaning services" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <img src={windowImage2} alt="Crystal clear window cleaning results" className="w-full h-64 object-cover rounded-lg shadow-md mb-4" />
-            </div>
-            <div className="text-center">
-              <img src={windowImage3} alt="Commercial window cleaning services" className="w-full h-64 object-cover rounded-lg shadow-md mb-4" />
-            </div>
-          </div>
-          <div className="text-center">
-            <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              Contact Us for a Quote
-            </Button>
-          </div>
+          </TabsContent>
+        </Tabs>
+
+        <div className="text-center mt-12">
+          <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+            Contact Us for a Quote
+          </Button>
         </div>
       </div>
     </section>

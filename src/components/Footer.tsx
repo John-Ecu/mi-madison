@@ -2,53 +2,54 @@ import DeerIcon from "./DeerIcon";
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-primary/20 py-12">
+    <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center mb-4">
-              <DeerIcon className="w-16 h-16 object-contain mr-3" />
-              <h3 className="text-xl font-bold text-primary">M&I Professional Services LLC</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <DeerIcon className="w-16 h-16 object-contain" />
+              <div>
+                <h3 className="text-lg font-bold">M&amp;I Professionals</h3>
+                <h3 className="text-base font-bold opacity-90">&amp; J&amp;J Special Services</h3>
+              </div>
             </div>
-            <p className="text-muted-foreground mb-4">
-              A small family-owned company providing professional cleaning services. 
-              Proudly serving Madison and all of Wisconsin since our founding.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Licensed, Insured & Bonded
+            <p className="text-sm opacity-90">
+              Family-owned companies serving Dane County and all of Wisconsin.
             </p>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold text-primary mb-4">Our Services</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>Residential Cleaning</li>
+            <h4 className="font-bold mb-4">M&amp;I - Cleaning</h4>
+            <ul className="space-y-2 text-sm opacity-90">
+              <li>House Cleaning</li>
               <li>Commercial Cleaning</li>
-              <li>Move-out Cleaning</li>
-              <li>Construction Cleanup</li>
               <li>Deep Cleaning</li>
-              <li>Sanitization Services</li>
+              <li>Residential Painting</li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold text-primary mb-4">Service Area</h4>
-            <p className="text-muted-foreground mb-2">Madison, Wisconsin</p>
-            <p className="text-muted-foreground mb-2">Dane County Area</p>
-            <p className="text-muted-foreground mb-4">Available throughout Wisconsin</p>
-            <p className="text-sm text-muted-foreground">
-              Call us to discuss your specific location needs
-            </p>
+            <h4 className="font-bold mb-4">J&amp;J - Maintenance</h4>
+            <ul className="space-y-2 text-sm opacity-90">
+              <li>Window Cleaning</li>
+              <li>Power Washing</li>
+              <li>Tree Trimming</li>
+              <li>Snow Shoveling</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-bold mb-4">Service Area</h4>
+            <ul className="space-y-2 text-sm opacity-90">
+              <li>Madison, WI</li>
+              <li>Dane County</li>
+              <li>All of Wisconsin</li>
+            </ul>
           </div>
         </div>
         
-        <div className="border-t border-primary/20 pt-8 mt-8 text-center">
-          <p className="text-muted-foreground">
-            © 2024 M&I Professional Services LLC. All rights reserved.
-          </p>
-          <p className="text-sm text-muted-foreground mt-2">
-            Proudly serving Madison, Wisconsin and surrounding areas
-          </p>
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm opacity-80">
+          <p>© {new Date().getFullYear()} M&amp;I Professional Services LLC &amp; J&amp;J Special Services. All rights reserved.</p>
         </div>
       </div>
     </footer>
