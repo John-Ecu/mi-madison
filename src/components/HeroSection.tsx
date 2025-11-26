@@ -10,8 +10,7 @@ const HeroSection = () => {
             <div className="flex items-center mb-6">
               <DeerIcon className="w-16 h-16 object-contain mr-4" />
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold">M&I Professionals</h2>
-                <h2 className="text-3xl md:text-4xl font-bold opacity-90">&amp; J&amp;J Special Services</h2>
+                <h2 className="text-4xl md:text-5xl font-bold">M&I Teaming up with J&J</h2>
               </div>
             </div>
             <h3 className="text-2xl md:text-3xl font-semibold mb-6">Your Trusted Family-Owned Service Providers</h3>
