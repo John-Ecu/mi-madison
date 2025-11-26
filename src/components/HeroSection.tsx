@@ -55,7 +55,7 @@ const HeroSection = () => {
               </ul>
             </div>
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6">
-              <h4 className="text-xl font-bold mb-3">J&amp;J Special Services - Maintenance</h4>
+              <h4 className="text-xl font-bold mb-3">J&amp;J Special Services - Building Management</h4>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-primary-foreground rounded-full mr-3"></span>
