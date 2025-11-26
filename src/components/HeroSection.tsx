@@ -9,11 +9,8 @@ const HeroSection = () => {
           <div>
             <div className="flex items-center mb-6">
               <DeerIcon className="w-16 h-16 object-contain mr-4" />
-              <div>
-                <h2 className="text-4xl md:text-5xl font-bold">M&I Teaming up with J&J</h2>
-              </div>
+              <h2 className="text-3xl md:text-4xl font-bold">Your Trusted Family-Owned Service Providers</h2>
             </div>
-            <h3 className="text-2xl md:text-3xl font-semibold mb-6">Your Trusted Family-Owned Service Providers</h3>
             <p className="text-xl mb-8 leading-relaxed">
               We're two family companies based in Dane County, serving homes and businesses 
               throughout Wisconsin. <strong>M&amp;I Professionals</strong> handles all your cleaning needs, 
