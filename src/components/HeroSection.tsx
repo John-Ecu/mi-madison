@@ -9,13 +9,17 @@ const HeroSection = () => {
           <div>
             <div className="flex items-center mb-6">
               <DeerIcon className="w-16 h-16 object-contain mr-4" />
-              <h2 className="text-5xl font-bold">M&I Professionals</h2>
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold">M&I Professionals</h2>
+                <h2 className="text-3xl md:text-4xl font-bold opacity-90">&amp; J&amp;J Special Services</h2>
+              </div>
             </div>
-            <h3 className="text-3xl font-semibold mb-6">Your Trusted Family-Owned Cleaning Service</h3>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-6">Your Trusted Family-Owned Service Providers</h3>
             <p className="text-xl mb-8 leading-relaxed">
-              We're a small family company based in Dane County, serving homes and businesses 
-              throughout Wisconsin. We know how important a clean space is - that's why we handle 
-              all the cleaning, dusting, and organizing so you can focus on what matters most to you.
+              We're two family companies based in Dane County, serving homes and businesses 
+              throughout Wisconsin. <strong>M&amp;I Professionals</strong> handles all your cleaning needs, 
+              while <strong>J&amp;J Special Services</strong> takes care of building maintenance, power washing, 
+              window cleaning, and more.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
@@ -36,25 +40,38 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-          <div className="relative">
-            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-8">
-              <h4 className="text-2xl font-bold mb-4">Why Choose M&I?</h4>
-              <ul className="space-y-3 text-lg">
+          <div className="relative space-y-4">
+            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6">
+              <h4 className="text-xl font-bold mb-3">M&amp;I Professionals - Cleaning</h4>
+              <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-primary-foreground rounded-full mr-3"></span>
-                  Small family company with personal touch
+                  House &amp; Commercial Cleaning
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-primary-foreground rounded-full mr-3"></span>
-                  Serving all of Dane County & Wisconsin
+                  Deep Cleaning &amp; Move-in/Move-out
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-primary-foreground rounded-full mr-3"></span>
-                  Professional and experienced staff
+                  Residential Painting
+                </li>
+              </ul>
+            </div>
+            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6">
+              <h4 className="text-xl font-bold mb-3">J&amp;J Special Services - Maintenance</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-primary-foreground rounded-full mr-3"></span>
+                  Power Washing &amp; Window Cleaning
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-primary-foreground rounded-full mr-3"></span>
-                  Flexible scheduling to meet your needs
+                  Tree Trimming &amp; Landscaping
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-primary-foreground rounded-full mr-3"></span>
+                  Snow Shoveling &amp; Light Maintenance
                 </li>
               </ul>
             </div>

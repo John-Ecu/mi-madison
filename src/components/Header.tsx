@@ -9,8 +9,8 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <DeerIcon className="w-16 h-16 object-contain" />
             <div className="flex flex-col justify-center">
-              <h1 className="text-2xl font-bold">M&I Professional Services LLC</h1>
-              <p className="text-sm opacity-90">Small Family-Owned Company</p>
+              <h1 className="text-xl md:text-2xl font-bold">M&I Professionals & J&J Special Services</h1>
+              <p className="text-sm opacity-90">Small Family-Owned Companies</p>
             </div>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
