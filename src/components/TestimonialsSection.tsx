@@ -4,9 +4,9 @@ import { Quote } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Tracy Lewis",
-      role: "Private Practice Psychotherapist",
-      quote: "Great service! They've been cleaning my home for over a decade."
+      name: "Kurt",
+      role: "Cleaning Contractor",
+      quote: "I handle high-volume commercial and residential cleaning, and M & I has helped me with countless projects. When last-minute jobs come up, it's usually impossible to find reliable help the same day—but M & I always comes through. They continue to impress me!"
     },
     {
       name: "Ryan",
@@ -14,9 +14,9 @@ const TestimonialsSection = () => {
       quote: "I rely on them for summer turnovers. They handle everything—maintenance, appliance changes, cleaning, painting, and even small repairs. Highly recommend giving them a shot!"
     },
     {
-      name: "Kurt",
-      role: "Cleaning Contractor",
-      quote: "I handle high-volume commercial and residential cleaning, and M & I has helped me with countless projects. When last-minute jobs come up, it's usually impossible to find reliable help the same day—but M & I always comes through. They continue to impress me!"
+      name: "Tracy Lewis",
+      role: "Private Practice Psychotherapist",
+      quote: "Great service! They've been cleaning my home for over a decade."
     }
   ];
 
