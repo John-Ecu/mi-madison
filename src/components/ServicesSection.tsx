@@ -144,18 +144,18 @@ const ServicesSection = () => {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full max-w-xl mx-auto grid-cols-2 mb-12 h-auto">
             <TabsTrigger value="mi" className="py-4 text-base md:text-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              M&amp;I Professionals
+              M & I Professionals
               <span className="hidden sm:inline ml-1">- Cleaning</span>
             </TabsTrigger>
             <TabsTrigger value="jj" className="py-4 text-base md:text-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              J&amp;J Special Services
+              J & J Special Services
               <span className="hidden sm:inline ml-1">- Building Management</span>
             </TabsTrigger>
           </TabsList>
 
           <TabsContent value="mi" className="mt-0">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-primary mb-2">M&amp;I Professional Services LLC</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2">M & I Professional Services LLC</h3>
               <p className="text-muted-foreground">Your trusted cleaning experts - from cozy homes to large commercial spaces</p>
             </div>
             {renderServiceCards(miServices)}
@@ -185,7 +185,7 @@ const ServicesSection = () => {
 
           <TabsContent value="jj" className="mt-0">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-primary mb-2">J&amp;J Special Services</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2">J & J Special Services</h3>
               <p className="text-muted-foreground">Building maintenance, outdoor services, and specialty work</p>
             </div>
             {renderServiceCards(jjServices)}

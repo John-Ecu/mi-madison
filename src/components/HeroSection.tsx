@@ -13,8 +13,8 @@ const HeroSection = () => {
             </div>
             <p className="text-xl mb-8 leading-relaxed">
               We're two family companies based in Dane County, serving homes and businesses 
-              throughout Wisconsin. <strong>M&amp;I Professionals</strong> handles all your cleaning needs, 
-              while <strong>J&amp;J Special Services</strong> takes care of building maintenance, power washing, 
+              throughout Wisconsin. <strong>M & I Professionals</strong> handles all your cleaning needs, 
+              while <strong>J & J Special Services</strong> takes care of building maintenance, power washing, 
               window cleaning, and more.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -38,7 +38,7 @@ const HeroSection = () => {
           </div>
           <div className="relative space-y-4">
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6">
-              <h4 className="text-xl font-bold mb-3">M&amp;I Professionals - Cleaning</h4>
+              <h4 className="text-xl font-bold mb-3">M & I Professionals - Cleaning</h4>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-primary-foreground rounded-full mr-3"></span>
@@ -55,7 +55,7 @@ const HeroSection = () => {
               </ul>
             </div>
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6">
-              <h4 className="text-xl font-bold mb-3">J&amp;J Special Services - Building Management</h4>
+              <h4 className="text-xl font-bold mb-3">J & J Special Services - Building Management</h4>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-primary-foreground rounded-full mr-3"></span>
