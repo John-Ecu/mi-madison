@@ -4,11 +4,19 @@ import { Quote } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Tracy",
-      role: "UW Madison Staff",
-      context: "House Cleaning - Weekly Service",
-      quote: "Great service! They have been cleaning my house for over a decade, wouldn't have it any other way!",
-      highlight: "Giant dog owner - extra vacuuming needed!"
+      name: "Tracy Lewis",
+      role: "Private Practice Psychotherapist",
+      quote: "Great service! They've been cleaning my home for over a decade."
+    },
+    {
+      name: "Ryan",
+      role: "Property Manager, Smith Management",
+      quote: "I rely on them for summer turnovers. They handle everything—maintenance, appliance changes, cleaning, painting, and even small repairs. Highly recommend giving them a shot!"
+    },
+    {
+      name: "Kurt",
+      role: "Cleaning Contractor",
+      quote: "I handle high-volume commercial and residential cleaning, and M & I has helped me with countless projects. When last-minute jobs come up, it's usually impossible to find reliable help the same day—but M & I always comes through. They continue to impress me!"
     }
   ];
 
@@ -22,7 +30,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-1 gap-8">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="border-2 border-primary/20 hover:border-primary/40 transition-colors">
               <CardContent className="p-8">
@@ -40,10 +48,6 @@ const TestimonialsSection = () => {
                       <div>
                         <p className="font-semibold text-primary">{testimonial.name}</p>
                         <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-sm font-medium text-primary">{testimonial.context}</p>
-                        <p className="text-xs text-muted-foreground">{testimonial.highlight}</p>
                       </div>
                     </div>
                   </div>
