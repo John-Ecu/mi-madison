@@ -9,7 +9,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <DeerIcon className="w-16 h-16 object-contain" />
             <div className="flex flex-col justify-center">
-              <h1 className="text-xl md:text-2xl font-bold">M&I + J&J Pro Services</h1>
+              <h1 className="text-xl md:text-2xl font-bold">M & I + J & J Pro Services</h1>
               <p className="text-sm opacity-90">Small Family-Owned Companies</p>
             </div>
           </div>

@@ -30,7 +30,7 @@ const ContactSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-3">Contact Our Team</h2>
           <p className="text-lg opacity-90">
-            Thank you for your interest in M&amp;I Professionals and J&amp;J Special Services. We can't wait to work together!
+            Thank you for your interest in M & I Professionals and J & J Special Services. We can't wait to work together!
           </p>
           <p className="text-base opacity-80 mt-2">
             Same team, same great service - whether you need cleaning or maintenance!
