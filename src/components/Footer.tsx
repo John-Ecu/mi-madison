@@ -9,8 +9,8 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <DeerIcon className="w-16 h-16 object-contain" />
               <div>
-                <h3 className="text-lg font-bold">M&amp;I Professionals</h3>
-                <h3 className="text-base font-bold opacity-90">&amp; J&amp;J Special Services</h3>
+                <h3 className="text-lg font-bold">M&I Professionals</h3>
+                <h3 className="text-base font-bold opacity-90">J&J Special Services</h3>
               </div>
             </div>
             <p className="text-sm opacity-90">
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm opacity-80">
-          <p>© {new Date().getFullYear()} M&amp;I Professional Services LLC &amp; J&amp;J Special Services. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} M&I Professional Services LLC | J&J Special Services. All rights reserved.</p>
         </div>
       </div>
     </footer>
