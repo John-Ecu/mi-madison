@@ -142,12 +142,18 @@ const ServicesSection = () => {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full max-w-xl mx-auto grid-cols-2 mb-12 h-auto bg-muted">
-            <TabsTrigger value="mi" className="py-4 text-base md:text-lg text-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-muted data-[state=inactive]:text-foreground">
+          <TabsList className="grid w-full max-w-xl mx-auto grid-cols-2 mb-12 h-auto bg-secondary p-1 rounded-lg">
+            <TabsTrigger 
+              value="mi" 
+              className="py-4 text-base md:text-lg rounded-md bg-secondary text-secondary-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            >
               M & I Professionals
               <span className="hidden sm:inline ml-1">- Cleaning</span>
             </TabsTrigger>
-            <TabsTrigger value="jj" className="py-4 text-base md:text-lg text-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-muted data-[state=inactive]:text-foreground">
+            <TabsTrigger 
+              value="jj" 
+              className="py-4 text-base md:text-lg rounded-md bg-secondary text-secondary-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            >
               J & J Special Services
               <span className="hidden sm:inline ml-1">- Building Management</span>
             </TabsTrigger>
