@@ -155,6 +155,7 @@ const ContactSection = () => {
               <div className="p-4 text-primary-foreground text-sm">
                 <p className="font-medium">Madison, WI & Dane County</p>
                 <p className="opacity-80">Travel available throughout Wisconsin</p>
+                <p className="opacity-80 italic mt-1">(Willing to do projects outside service area)</p>
               </div>
             </CardContent>
           </Card>

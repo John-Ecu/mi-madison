@@ -24,7 +24,6 @@ const Footer = () => {
               <li>House Cleaning</li>
               <li>Commercial Cleaning</li>
               <li>Deep Cleaning</li>
-              <li>Residential Painting</li>
             </ul>
           </div>
           
@@ -35,6 +34,7 @@ const Footer = () => {
               <li>Power Washing</li>
               <li>Tree Trimming</li>
               <li>Snow Shoveling</li>
+              <li>Residential Painting</li>
             </ul>
           </div>
           
