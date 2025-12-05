@@ -57,6 +57,7 @@ const BeforeAfterSection = () => {
                       src={example.before} 
                       alt={`${example.title} - Before cleaning`}
                       className="w-full h-80 object-cover rounded-lg shadow-lg"
+                      loading="lazy"
                     />
                     <div className="absolute top-4 left-4 bg-destructive text-destructive-foreground px-4 py-2 rounded-md font-semibold">
                       Before
@@ -69,6 +70,7 @@ const BeforeAfterSection = () => {
                       src={example.after} 
                       alt={`${example.title} - After cleaning`}
                       className="w-full h-80 object-cover rounded-lg shadow-lg"
+                      loading="lazy"
                     />
                     <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold">
                       After
