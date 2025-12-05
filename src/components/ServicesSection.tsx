@@ -112,7 +112,7 @@ const ServicesSection = () => {
             {service.images && (
               <div className="grid grid-cols-2 gap-2 mb-4">
                 {service.images.map((img, imgIndex) => (
-                  <img key={imgIndex} src={img} alt={`${service.title} example ${imgIndex + 1}`} className="w-full h-32 object-cover rounded-lg" />
+                  <img key={imgIndex} src={img} alt={`${service.title} example ${imgIndex + 1}`} className="w-full h-32 object-cover rounded-lg" loading="lazy" />
                 ))}
               </div>
             )}
@@ -165,17 +165,17 @@ const ServicesSection = () => {
               <h3 className="text-2xl font-bold text-center mb-8 text-primary">Our Work Speaks for Itself</h3>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <img src={kitchenImage} alt="Professional kitchen cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
+                  <img src={kitchenImage} alt="Professional kitchen cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" loading="lazy" />
                   <h4 className="font-semibold text-primary">Kitchen Deep Clean</h4>
                   <p className="text-sm text-muted-foreground">Sparkling countertops and appliances</p>
                 </div>
                 <div className="text-center">
-                  <img src={bathroomImage} alt="Bathroom deep cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
+                  <img src={bathroomImage} alt="Bathroom deep cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" loading="lazy" />
                   <h4 className="font-semibold text-primary">Bathroom Restoration</h4>
                   <p className="text-sm text-muted-foreground">Sanitized and gleaming surfaces</p>
                 </div>
                 <div className="text-center">
-                  <img src={officeImage} alt="Commercial office cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" />
+                  <img src={officeImage} alt="Commercial office cleaning" className="w-full h-48 object-cover rounded-lg shadow-md mb-4" loading="lazy" />
                   <h4 className="font-semibold text-primary">Commercial Spaces</h4>
                   <p className="text-sm text-muted-foreground">Professional business environments</p>
                 </div>
@@ -198,13 +198,13 @@ const ServicesSection = () => {
               </p>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <img src={windowImage1} alt="Professional window cleaning - exterior view" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                  <img src={windowImage1} alt="Professional window cleaning - exterior view" className="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" />
                 </div>
                 <div className="text-center">
-                  <img src={windowImage2} alt="Crystal clear window cleaning results" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                  <img src={windowImage2} alt="Crystal clear window cleaning results" className="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" />
                 </div>
                 <div className="text-center">
-                  <img src={windowImage3} alt="Commercial window cleaning services" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                  <img src={windowImage3} alt="Commercial window cleaning services" className="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" />
                 </div>
               </div>
             </div>
