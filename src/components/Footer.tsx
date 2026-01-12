@@ -1,3 +1,4 @@
+import { Instagram } from "lucide-react";
 import DeerIcon from "./DeerIcon";
 
 const Footer = () => {
@@ -13,9 +14,18 @@ const Footer = () => {
                 <h3 className="text-base font-bold opacity-90">J & J Special Services</h3>
               </div>
             </div>
-            <p className="text-sm opacity-90">
+            <p className="text-sm opacity-90 mb-4">
               Family-owned companies serving Dane County and all of Wisconsin.
             </p>
+            <a 
+              href="https://www.instagram.com/mi_sparklecrew" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm hover:opacity-80 transition-opacity"
+            >
+              <Instagram className="w-5 h-5" />
+              <span>@mi_sparklecrew</span>
+            </a>
           </div>
           
           <div>
