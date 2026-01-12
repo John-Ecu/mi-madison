@@ -142,17 +142,25 @@ const ServicesSection = () => {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full max-w-xl mx-auto grid-cols-2 mb-12 h-auto bg-secondary p-1 rounded-lg">
+          <TabsList className="grid w-full max-w-xl mx-auto grid-cols-2 mb-12 h-auto p-1 rounded-lg" style={{ backgroundColor: 'hsl(var(--muted))' }}>
             <TabsTrigger 
               value="mi" 
-              className="py-4 text-base md:text-lg rounded-md bg-secondary text-secondary-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              className="py-4 text-base md:text-lg rounded-md transition-all"
+              style={{ 
+                backgroundColor: activeTab === 'mi' ? 'hsl(var(--primary))' : 'hsl(var(--muted))',
+                color: activeTab === 'mi' ? 'hsl(var(--primary-foreground))' : 'hsl(var(--foreground))'
+              }}
             >
               M & I Professionals
               <span className="hidden sm:inline ml-1">- Cleaning</span>
             </TabsTrigger>
             <TabsTrigger 
               value="jj" 
-              className="py-4 text-base md:text-lg rounded-md bg-secondary text-secondary-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              className="py-4 text-base md:text-lg rounded-md transition-all"
+              style={{ 
+                backgroundColor: activeTab === 'jj' ? 'hsl(var(--primary))' : 'hsl(var(--muted))',
+                color: activeTab === 'jj' ? 'hsl(var(--primary-foreground))' : 'hsl(var(--foreground))'
+              }}
             >
               J & J Special Services
               <span className="hidden sm:inline ml-1">- Building Management</span>
