@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, DollarSign, Send } from "lucide-react";
+import { Phone, Mail, MapPin, DollarSign, Send, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -196,6 +196,28 @@ const ContactSection = () => {
               <p><strong>Email:</strong> john.castroflores2000@gmail.com</p>
               <p><strong>Phone:</strong> 608.358.3706</p>
               <p className="text-xs opacity-70 mt-2">Contact team members for other approved payment methods</p>
+            </CardContent>
+          </Card>
+          
+          {/* Instagram */}
+          <Card className="bg-primary-foreground/10 border-primary-foreground/20 mt-6">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center text-primary-foreground text-lg">
+                <Instagram className="w-5 h-5 mr-2" />
+                Follow Us
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-primary-foreground text-sm">
+              <a 
+                href="https://www.instagram.com/mi_sparklecrew" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity"
+              >
+                <Instagram className="w-5 h-5" />
+                <span>@mi_sparklecrew</span>
+              </a>
+              <p className="text-xs opacity-70 mt-2">See our latest work and updates!</p>
             </CardContent>
           </Card>
         </div>
