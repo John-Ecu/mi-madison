@@ -142,29 +142,33 @@ const ServicesSection = () => {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full max-w-xl mx-auto grid-cols-2 mb-12 h-auto p-1 rounded-lg" style={{ backgroundColor: 'hsl(var(--muted))' }}>
-            <TabsTrigger 
-              value="mi" 
-              className="py-4 text-base md:text-lg rounded-md transition-all"
-              style={{ 
-                backgroundColor: activeTab === 'mi' ? 'hsl(var(--primary))' : 'hsl(var(--muted))',
-                color: activeTab === 'mi' ? 'hsl(var(--primary-foreground))' : 'hsl(var(--foreground))'
-              }}
+          <div className="flex w-full max-w-xl mx-auto mb-12 p-1 rounded-lg bg-muted gap-1">
+            <button
+              onClick={() => setActiveTab("mi")}
+              className={`flex-1 py-4 text-base md:text-lg rounded-md transition-all font-medium ${
+                activeTab === "mi" 
+                  ? "bg-primary text-primary-foreground shadow-sm" 
+                  : "bg-muted text-foreground hover:bg-muted/80"
+              }`}
             >
               M & I Professionals
               <span className="hidden sm:inline ml-1">- Cleaning</span>
-            </TabsTrigger>
-            <TabsTrigger 
-              value="jj" 
-              className="py-4 text-base md:text-lg rounded-md transition-all"
-              style={{ 
-                backgroundColor: activeTab === 'jj' ? 'hsl(var(--primary))' : 'hsl(var(--muted))',
-                color: activeTab === 'jj' ? 'hsl(var(--primary-foreground))' : 'hsl(var(--foreground))'
-              }}
+            </button>
+            <button
+              onClick={() => setActiveTab("jj")}
+              className={`flex-1 py-4 text-base md:text-lg rounded-md transition-all font-medium ${
+                activeTab === "jj" 
+                  ? "bg-primary text-primary-foreground shadow-sm" 
+                  : "bg-muted text-foreground hover:bg-muted/80"
+              }`}
             >
               J & J Special Services
               <span className="hidden sm:inline ml-1">- Building Management</span>
-            </TabsTrigger>
+            </button>
+          </div>
+          <TabsList className="hidden">
+            <TabsTrigger value="mi">M & I</TabsTrigger>
+            <TabsTrigger value="jj">J & J</TabsTrigger>
           </TabsList>
 
           <TabsContent value="mi" className="mt-0">
