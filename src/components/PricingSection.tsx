@@ -1,86 +1,38 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Clock, Sparkles, Users } from "lucide-react";
 
 const PricingSection = () => {
-  const pricingData = [
-    {
-      service: "House Cleaning",
-      hourlyRate: "$28 - $45 per cleaner",
-      flatFee: "$90 - $280",
-      roomRate: "$85 for 1bed/1bath • $25 for each additional bedroom or bathroom",
-      sqftRate: "$0.04 - $0.12 per square foot"
-    },
-    {
-      service: "Deep Cleaning",
-      hourlyRate: "$35 - $55 per cleaner",
-      flatFee: "$150 - $350",
-      roomRate: "$120 for 1bed/1bath • $30 for each additional bedroom or bathroom",
-      sqftRate: "$0.08 - $0.15 per square foot"
-    },
-    {
-      service: "Move-out Cleaning",
-      hourlyRate: "$35 - $50 per cleaner",
-      flatFee: "$180 - $350",
-      roomRate: "$110 for 1bed/1bath • $25 for each additional bedroom or bathroom",
-      sqftRate: "$0.15 - $0.20 per square foot"
-    },
-    {
-      service: "Commercial & Construction",
-      hourlyRate: "$40 - $60 per cleaner",
-      flatFee: "$150 - $600",
-      roomRate: "Contact us for custom pricing",
-      sqftRate: "$0.08 - $0.35 per square foot"
-    }
-  ];
-
   return (
-    <section id="pricing" className="py-20 bg-secondary/30">
+    <section id="pricing" className="py-16 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-primary">Price Guide</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our competitive rates are based on Madison area market standards. We're always willing to work with you on pricing to fit your budget. 
-            All prices above are estimates - we provide final quotes after visiting your location.
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 text-primary">Transparent & Fair Pricing</h2>
+          <p className="text-muted-foreground mb-8">
+            Every space is unique. We provide personalized quotes based on your specific needs — no hidden fees, just honest pricing.
           </p>
-        </div>
-
-        <div className="overflow-x-auto">
-          <div className="min-w-[800px]">
-            <div className="grid grid-cols-5 gap-4 mb-4">
-              <div className="font-bold text-primary text-lg">Cleaning Task</div>
-              <div className="font-bold text-primary text-lg">Hourly Rate</div>
-              <div className="font-bold text-primary text-lg">Flat Fee</div>
-              <div className="font-bold text-primary text-lg">Room Rate</div>
-              <div className="font-bold text-primary text-lg">Sq Ft Rate</div>
+          
+          <div className="flex flex-wrap justify-center gap-6 mb-10">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Sparkles className="w-4 h-4 text-puzzle-orange" />
+              <span>Free Estimates</span>
             </div>
-            
-            {pricingData.map((item, index) => (
-              <Card key={index} className="mb-4 border-primary/20">
-                <CardContent className="p-4">
-                  <div className="grid grid-cols-5 gap-4 items-start">
-                    <div className="font-semibold text-primary">{item.service}</div>
-                    <div className="text-sm">{item.hourlyRate}</div>
-                    <div className="text-sm">{item.flatFee}</div>
-                    <div className="text-sm">{item.roomRate}</div>
-                    <div className="text-sm">{item.sqftRate}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Clock className="w-4 h-4 text-puzzle-green" />
+              <span>Flexible Scheduling</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Users className="w-4 h-4 text-puzzle-blue" />
+              <span>Budget-Friendly Options</span>
+            </div>
           </div>
-        </div>
 
-        <div className="text-center mt-12">
           <Button 
             size="lg" 
-            className="text-lg px-8 py-3"
+            className="text-lg px-8"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Get Custom Quote
+            Get Your Free Quote
           </Button>
-          <p className="text-sm text-muted-foreground mt-4">
-            Contact us for a personalized estimate - we're flexible and work with your budget!
-          </p>
         </div>
       </div>
     </section>
