@@ -52,10 +52,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				brand: {
-					brown: 'hsl(var(--brand-brown))',
-					'brown-light': 'hsl(var(--brand-brown-light))',
-					'brown-dark': 'hsl(var(--brand-brown-dark))'
+				puzzle: {
+					orange: 'hsl(var(--puzzle-orange))',
+					red: 'hsl(var(--puzzle-red))',
+					green: 'hsl(var(--puzzle-green))',
+					blue: 'hsl(var(--puzzle-blue))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
