@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import DeerIcon from "./DeerIcon";
+import PuzzlePieces from "./PuzzlePieces";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="bg-gradient-to-br from-primary to-brand-purple-dark text-primary-foreground py-20">
-      <div className="container mx-auto px-4">
+    <section id="home" className="relative bg-primary text-primary-foreground py-20 overflow-hidden">
+      <PuzzlePieces position="top-left" />
+      <PuzzlePieces position="bottom-right" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="flex items-center mb-6">
