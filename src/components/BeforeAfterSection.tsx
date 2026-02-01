@@ -12,8 +12,8 @@ const BeforeAfterSection = () => {
     {
       title: "Bathtub Restoration",
       description: "Expert cleaning removing stubborn stains and buildup, restoring bathtubs to pristine condition",
-      before: bathroomTubBefore,
-      after: bathroomTubAfter
+      before: bathroomTubAfter,
+      after: bathroomTubBefore
     },
     {
       title: "Deep Clean - Living Room",
