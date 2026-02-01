@@ -9,10 +9,10 @@ const ServiceAreaMap = () => {
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
-    // Initialize map centered on Dane County at zoom level 10
+    // Initialize map centered on Dane County at zoom level 9 to show full county
     const map = L.map(mapRef.current, {
-      center: [43.07, -89.4],
-      zoom: 10,
+      center: [43.05, -89.4],
+      zoom: 9,
       scrollWheelZoom: false,
     });
 
@@ -23,23 +23,36 @@ const ServiceAreaMap = () => {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
 
-    // Define the boundary polygon covering all specified cities in Dane County
-    // Points ordered clockwise: Cross Plains, Verona, Fitchburg, Oregon, Stoughton, 
-    // Cottage Grove, Deerfield, Marshall, Sun Prairie, DeForest, Windsor back to Cross Plains
+    // Full Dane County boundary polygon (clockwise from northwest)
+    // Includes: Waunakee, DeForest, Sun Prairie, Cottage Grove, Deerfield, 
+    // Stoughton, Edgerton edge, Oregon, Fitchburg, Verona, Cross Plains, Middleton, Madison
     const daneCountyBoundary: L.LatLngExpression[] = [
-      [43.1145, -89.6565], // Cross Plains (west)
-      [43.0000, -89.6400], // Verona (southwest)
-      [42.9600, -89.4700], // Fitchburg (south-southwest)
-      [42.9260, -89.3850], // Oregon (south)
-      [42.9170, -89.2180], // Stoughton (southeast)
-      [42.9500, -89.1500], // Deerfield area (east-southeast)
-      [43.0760, -89.2000], // Cottage Grove (east)
-      [43.1680, -89.0680], // Marshall (far east)
-      [43.1830, -89.2140], // Sun Prairie (northeast)
-      [43.2480, -89.3450], // DeForest (north)
-      [43.2440, -89.4380], // Windsor (north-northwest)
-      [43.1800, -89.5500], // Back toward Cross Plains
-      [43.1145, -89.6565], // Close the polygon at Cross Plains
+      // Northwest - Black Earth/Mazomanie area
+      [43.18, -89.75],
+      // North - Waunakee
+      [43.30, -89.45],
+      // Northeast - DeForest/Windsor
+      [43.32, -89.30],
+      // East - Sun Prairie
+      [43.20, -89.10],
+      // East - Cottage Grove/Deerfield
+      [43.08, -89.00],
+      // Southeast - near Cambridge
+      [42.95, -89.00],
+      // South - Stoughton
+      [42.88, -89.15],
+      // South - edge of Edgerton
+      [42.78, -89.30],
+      // Southwest - Oregon area
+      [42.85, -89.50],
+      // West - Verona/Fitchburg
+      [42.90, -89.65],
+      // West - Cross Plains
+      [43.05, -89.75],
+      // Northwest - Middleton
+      [43.12, -89.70],
+      // Close polygon
+      [43.18, -89.75],
     ];
 
     // Create the red dotted polygon
