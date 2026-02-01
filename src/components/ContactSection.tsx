@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, DollarSign, Send, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import ServiceAreaMap from "./ServiceAreaMap";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -141,21 +142,11 @@ const ContactSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d370000!2d-89.5!3d43.07!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8806536d3a2019ff%3A0x4e0cfcb5ba484198!2sDane%20County%2C%20WI!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Service Area Map - Dane County, WI"
-                className="rounded-b-lg"
-              />
+              <ServiceAreaMap />
               <div className="p-4 text-primary-foreground text-sm">
                 <p className="font-medium">Full Dane County Service Area</p>
                 <p className="opacity-80 text-xs leading-relaxed">
-                  Madison • McFarland • Verona • Fitchburg • Cottage Grove • Sun Prairie • Windsor • DeForest • Cross Plains • Edgerton
+                  Cross Plains • Verona • Oregon • McFarland • Fitchburg • Stoughton • Deerfield • Cottage Grove • Marshall • Sun Prairie • DeForest • Windsor
                 </p>
                 <p className="opacity-80 italic mt-2 text-xs">(Willing to do projects outside service area)</p>
               </div>
