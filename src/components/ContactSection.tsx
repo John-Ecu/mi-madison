@@ -1,22 +1,9 @@
-import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, DollarSign, Send, Instagram } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 import ServiceAreaMap from "./ServiceAreaMap";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
-
   const teamMembers = [
     {
       name: "John Castro",
@@ -38,22 +25,6 @@ const ContactSection = () => {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const subject = encodeURIComponent(`Service Request from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
-    );
-    
-    window.location.href = `mailto:jc.miprofessionalservices@gmail.com?subject=${subject}&body=${body}`;
-    
-    toast({
-      title: "Opening email client...",
-      description: "Your message details have been prepared. Send the email to complete your request!",
-    });
-  };
-
   return (
     <section id="contact" className="py-16 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
@@ -62,78 +33,21 @@ const ContactSection = () => {
           <p className="text-lg opacity-90">
             Thank you for your interest in M & I Professionals and J & J Special Services. We can't wait to work together!
           </p>
-          <p className="text-base opacity-80 mt-2">
+          <p className="text-base opacity-80 mt-2 mb-6">
             Same team, same great service - whether you need cleaning or maintenance!
           </p>
+          
+          {/* Email Button */}
+          <Button size="lg" variant="secondary" className="text-lg px-8" asChild>
+            <a href="mailto:miprofessionalservices0310@gmail.com?subject=Quote%20Request">
+              <Send className="w-5 h-5 mr-2" />
+              Request a Quote
+            </a>
+          </Button>
         </div>
 
-        {/* Contact Form & Map */}
-        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8 mb-12">
-          {/* Contact Form */}
-          <Card className="bg-primary-foreground/10 border-primary-foreground/20">
-            <CardHeader>
-              <CardTitle className="text-primary-foreground flex items-center gap-2">
-                <Send className="w-5 h-5" />
-                Request a Quote
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-primary-foreground">Name</Label>
-                  <Input
-                    id="name"
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/50"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-primary-foreground">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="your@email.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    className="bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/50"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-primary-foreground">Phone</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    placeholder="(608) 555-1234"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/50"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-primary-foreground">Message</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell us about your cleaning or service needs..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    rows={4}
-                    className="bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/50"
-                  />
-                </div>
-                <Button type="submit" variant="secondary" className="w-full">
-                  <Send className="w-4 h-4 mr-2" />
-                  Send Request
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-
-          {/* Map */}
+        {/* Map */}
+        <div className="max-w-3xl mx-auto mb-12">
           <Card className="bg-primary-foreground/10 border-primary-foreground/20 overflow-hidden">
             <CardHeader>
               <CardTitle className="text-primary-foreground flex items-center gap-2">
