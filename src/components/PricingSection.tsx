@@ -29,9 +29,11 @@ const PricingSection = () => {
           <Button 
             size="lg" 
             className="text-lg px-8"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            asChild
           >
-            Get Your Free Quote
+            <a href="mailto:miprofessionalservices0310@gmail.com?subject=Quote%20Request">
+              Get Your Free Quote
+            </a>
           </Button>
         </div>
       </div>
