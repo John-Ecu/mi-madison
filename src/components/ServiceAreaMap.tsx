@@ -16,7 +16,6 @@ const ServiceAreaMap = () => {
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
-    // Load Google Maps script dynamically
     const script = document.createElement("script");
     script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&callback=initMap`;
     script.async = true;
@@ -25,9 +24,8 @@ const ServiceAreaMap = () => {
     window.initMap = () => {
       if (!mapRef.current) return;
 
-      // Initialize map centered on Dane County
       const map = new google.maps.Map(mapRef.current, {
-        center: { lat: 43.05, lng: -89.35 },
+        center: { lat: 43.05, lng: -89.4 },
         zoom: 9,
         scrollwheel: false,
         mapTypeControl: false,
@@ -36,32 +34,39 @@ const ServiceAreaMap = () => {
 
       mapInstanceRef.current = map;
 
-      // Big rectangle covering Dane County service area
-      // Includes: Middleton, Verona, Fitchburg, McFarland, Cottage Grove, 
-      // Windsor, Waunakee, Sun Prairie, Marshall, Cross Plains, edge of Edgerton
-      const daneCountyBounds = [
-        { lat: 43.32, lng: -89.75 }, // Northwest corner (Cross Plains/Waunakee)
-        { lat: 43.32, lng: -89.00 }, // Northeast corner (Marshall/Sun Prairie)
-        { lat: 42.78, lng: -89.00 }, // Southeast corner (edge of Edgerton)
-        { lat: 42.78, lng: -89.75 }, // Southwest corner (Verona area)
+      // Red dotted boundary covering: Waunakee, DeForest, Sun Prairie, Cottage Grove,
+      // Deerfield, Stoughton, Edgerton edge, Oregon, Fitchburg, Verona, Cross Plains, Middleton, Madison
+      const daneCountyBoundary = [
+        { lat: 43.18, lng: -89.75 }, // Cross Plains (west)
+        { lat: 43.30, lng: -89.45 }, // Waunakee (north)
+        { lat: 43.32, lng: -89.30 }, // DeForest (north)
+        { lat: 43.20, lng: -89.10 }, // Sun Prairie (east)
+        { lat: 43.08, lng: -89.00 }, // Cottage Grove / Deerfield (east)
+        { lat: 42.95, lng: -89.00 }, // Deerfield (southeast)
+        { lat: 42.88, lng: -89.15 }, // Stoughton (south)
+        { lat: 42.78, lng: -89.30 }, // Edgerton edge (south)
+        { lat: 42.85, lng: -89.50 }, // Oregon (southwest)
+        { lat: 42.90, lng: -89.65 }, // Fitchburg / Verona (west)
+        { lat: 43.05, lng: -89.75 }, // Verona (west)
+        { lat: 43.12, lng: -89.70 }, // Middleton (northwest)
       ];
 
-      // Create highlighted rectangle polygon
-      const polygon = new google.maps.Polygon({
-        paths: daneCountyBounds,
+      // Red dotted polygon
+      new google.maps.Polygon({
+        paths: daneCountyBoundary,
         strokeColor: "#dc2626",
         strokeOpacity: 1,
         strokeWeight: 3,
         fillColor: "#dc2626",
-        fillOpacity: 0.15,
+        fillOpacity: 0.1,
+        map: map,
       });
-      polygon.setMap(map);
 
-      // Add marker for Madison (center)
+      // Madison marker
       new google.maps.Marker({
         position: { lat: 43.0731, lng: -89.4012 },
         map: map,
-        title: "M & I Professionals - Serving all of Dane County",
+        title: "M & I Professionals - Serving Dane County",
       });
     };
 
@@ -69,9 +74,7 @@ const ServiceAreaMap = () => {
 
     return () => {
       const existingScript = document.querySelector(`script[src*="maps.googleapis.com"]`);
-      if (existingScript) {
-        existingScript.remove();
-      }
+      if (existingScript) existingScript.remove();
       delete (window as any).initMap;
       mapInstanceRef.current = null;
     };
